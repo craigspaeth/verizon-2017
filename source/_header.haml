@@ -5,13 +5,11 @@
         .hamburger
     %a.header-content-logo(href="index.html")
       %img(alt="Verizon 2016" src="images/header/logo.svg")
-    %a.header-content-label(href="index.html")
-      %span 2016 Annual Report
-    - if lvl1 == "home"
-      .header-content-letter
-        %a(href="letter.html" data-modal="#modal_vote")
-          Skip to Chairman’s letter
-          %img(src="images/home/more_red.svg" alt="")
+    .header-content-text
+      .header-content-label 2016 Annual Report
+      %a.header-content-skip{ href: "letter.html" }
+        Skip to Chairman’s letter
+        %img.header-content-skip-icon{ src:"images/home/more_red.svg" }
 
 
   %nav.header-nav

@@ -1,0 +1,15 @@
+.ar-slide
+  %video.ar-slide-video{ autoplay: true, loop: true }
+    %source{ src: "videos/#{video}-bg.mp4", type: "video/mp4" }
+  .ar-slide-video-main
+    %video.ar-slide-video
+      %source{ src: "videos/#{video}.mp4", type: "video/mp4" }
+    .ar-slide-video-controls
+      %img.ar-slide-video-controls-pause{ src: "images/controls/pause.svg" }
+      %img.ar-slide-video-controls-play{ src: "images/controls/play.svg" }
+      %img.ar-slide-video-controls-sound{ src: "images/controls/sound.svg" }
+      %img.ar-slide-video-controls-mute{ src: "images/controls/mute.svg" }
+  %h2.ar-slide-header
+    = header
+    .ar-slide-sub-header= subheader
+  %img.ar-slide-play-button{ src: "images/play.svg" }

@@ -94,8 +94,6 @@ $bar_line_interval: 40px;
           bottom: 0;
           background: #9C9FA1;
           width: 0%;
-
-          @include transition(all 0.5s);
         }
 
         &:first-child {
