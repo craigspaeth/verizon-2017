@@ -1,0 +1,31 @@
+%header.header.headroom
+  .header-content
+    .header-content-burger
+      .header-content-burger-click
+        .hamburger
+    %a.header-content-logo(href="index.html")
+      %img(alt="Verizon 2016" src="images/header/logo.svg")
+    %a.header-content-label(href="index.html")
+      %span 2016 Annual Report
+    - if lvl1 == "home"
+      .header-content-letter
+        %a(href="letter.html" data-modal="#modal_vote")
+          Skip to Chairman’s letter
+          %img(src="images/home/more_red.svg" alt="")
+
+
+  %nav.header-nav
+    %ul
+      %li
+        %a(href="index.html") Home
+      %li
+        %a(href="letter.html") Chairman’s letter
+      %li
+        %a(href="financial-highlights.html") Financial highlights
+      %li
+        %a(href="#") Corporate responsibility highlights
+      %li
+        %a(href="am.html") Annual shareholder meeting
+      %li
+        %a(href="#") Downloads
+  .header-nav_cover

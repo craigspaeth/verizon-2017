@@ -1,11 +1,0 @@
-BEGIN:VCALENDAR
-VERSION:1.0
-BEGIN:VEVENT
-DTSTART:20170504T083000
-DTEND:20170504T103000
-LOCATION:Hotel Maecenas Lorem Ipsum  678 Sapien Viverra Suspendisse  Pellentesque, Bibendum 12345
-DESCRIPTION:The telecommunications industry has transitioned from voice to data  and in 2015 to video, and every time we make  that transition, Verizon comes out on top.
-SUMMARY:Verizon Annual Meeting
-PRIORITY:3
-END:VEVENT
-END:VCALENDAR

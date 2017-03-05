@@ -1,0 +1,425 @@
+.ar_letter {
+  font-size: 14px;
+  line-height: 21px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    height: 600px;
+    position: relative;
+    color: #fff;
+    background: #B5AFAE center 0 no-repeat url(../images/ceo/intro_.jpg);
+
+    @include background-size(cover);
+
+    &-play {
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      left: 80px;
+      bottom: 48px;
+      cursor: pointer;
+      background: 0 0 no-repeat url(../images/ceo/play.svg);
+    }
+
+    &-content {
+      height: 100%;
+      position: relative;
+      padding: 178px 80px 271px 80px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 50px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .callout {
+    background: #F6F6F6;
+    padding: 100px 0 80px;
+    margin-bottom: 100px;
+
+    &-container {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 48px;
+      line-height: 50px;
+      margin: 0 0 28px;
+    }
+
+    p {
+      font-size: 21px;
+      line-height: 28px;
+    }
+  }
+
+  .letter-container {
+    max-width: 1062px;
+    margin: 0 auto;
+
+    &-section {
+      position: relative;
+      padding: 0 0 100px 436px;
+    }
+  }
+
+  .photo {
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 11;
+    background: #FFF;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .letter-content {
+    p:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .photo2 {
+    margin: 30px 0 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .photo3 {
+    margin: 30px 0 0;
+  }
+
+  .scheme {
+    margin: 48px 0 0;
+  }
+
+  .aside {
+    @include transition(opacity 0.5s);
+
+    position: absolute;
+    width: 300px;
+    margin-left: -436px;
+
+    &-block {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 412px;
+      background: #fff;
+
+      @include transition(opacity 0.5s);
+
+      opacity: 0;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    img {
+      margin: 48px 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 30px;
+      line-height: 32px;
+      max-width: 300px;
+      font-family: $font-primary-bold;
+      color: #D52B1E;
+    }
+  }
+}
+
+#aside1.fixed,
+#aside3.fixed {
+  position: fixed;
+  width: 300px;
+  top: 100px;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+
+  .aside-block {
+    padding-top: 50px;
+  }
+}
+
+#aside1 {
+  .aside-block__1 {
+    opacity: 1;
+  }
+}
+
+#aside1.section2 {
+  .aside-block__1 {
+    opacity: 0;
+  }
+
+  .aside-block__2 {
+    opacity: 1;
+  }
+}
+
+#aside1.hide {
+  opacity: 0;
+}
+
+#aside3.section3 {
+  .aside-block__2 {
+    opacity: 0;
+  }
+
+  .aside-block__3 {
+    opacity: 1;
+  }
+}
+
+#aside3.section4 {
+  .aside-block__3 {
+    opacity: 0;
+  }
+
+  .aside-block__4 {
+    opacity: 1;
+  }
+}
+
+#aside3.section5 {
+  .aside-block__4 {
+    opacity: 0;
+  }
+
+  .aside-block__5 {
+    opacity: 1;
+  }
+}
+
+#aside3 {
+  .aside-block__3 {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .ar_letter {
+    padding: 0 0 10px;
+
+    .intro {
+      height: 600px;
+
+      &-play {
+        left: 30px;
+        bottom: 44px;
+      }
+
+      &-content {
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 30px 271px;
+        max-width: none;
+      }
+
+      h1 {}
+    }
+
+    .callout {
+      padding: 50px 30px 30px;
+      margin-bottom: 50px;
+
+      &-container {
+        max-width: none;
+      }
+
+      h2 {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 24px;
+      }
+    }
+
+    .letter-container {
+      max-width: none;
+
+      &-section {
+        position: relative;
+        padding: 0 30px 50px 279px;
+      }
+    }
+
+    .photo {
+      margin-bottom: 50px;
+    }
+
+    .photo2 {
+      margin: 10px 0 30px;
+    }
+
+    .photo3 {
+      margin: 10px 0 0;
+    }
+
+    .scheme {
+      margin: 10px 0 0;
+    }
+
+    .aside {
+      width: 200px;
+      margin-left: -249px;
+
+      &-block {
+        width: 200px;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 26px;
+      }
+
+      img {
+        margin: 30px 0;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  #aside1.fixed,
+  #aside3.fixed {
+    width: 200px;
+
+    .aside-block {
+      padding-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ar_letter {
+    padding: 0 0 10px;
+
+    .intro {
+      height: 510px;
+
+      &-play {
+        left: 18px;
+        bottom: 38px;
+      }
+
+      &-content {
+        padding: 0 18px 206px;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 32px;
+      }
+    }
+
+    .callout {
+      padding: 50px 18px 30px;
+
+      &-container {
+        max-width: none;
+      }
+
+      h2 {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 24px;
+      }
+    }
+
+    .letter-container {
+      max-width: none;
+
+      &-section {
+        position: relative;
+        padding: 0 18px 50px 18px;
+      }
+    }
+
+    .aside {
+      width: auto;
+      margin-left: 0;
+      position: static;
+
+      &-block {
+        width: auto;
+        opacity: 1;
+        position: static;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 26px;
+      }
+
+      img {
+        margin: 30px 0;
+        max-width: 150px;
+        height: auto;
+      }
+    }
+  }
+
+  #aside1.fixed,
+  #aside3.fixed {
+    position: relative;
+    top: 0;
+    padding: 0;
+    width: auto;
+
+    .aside-block {
+      padding: 0;
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  #aside1 {
+    .aside-block__1 {
+      opacity: 1;
+    }
+  }
+
+  #aside1.section2 {
+    .aside-block__1 {
+      opacity: 1;
+    }
+  }
+
+  #aside1.hide {
+    opacity: 1;
+  }
+
+  #aside3.section4 {
+    .aside-block__3 {
+      opacity: 1;
+    }
+  }
+}
