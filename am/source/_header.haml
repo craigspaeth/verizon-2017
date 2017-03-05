@@ -1,0 +1,76 @@
+#modal_hello.modal_content
+  .modal_hello
+    .modal-content-header
+      %h2 Just so you know
+    .modal-content-text
+      %p The purpose of this website is to provide you with information about Verizon’s 2017 annual meeting. Among other things, we discuss the meeting agenda, including the management and shareholder proposals. We also explain how you can vote. This website is not intended to be a substitute for reading Verizon’s 2017 Proxy Statement, which includes information required by the Securities and Exchange Commission. We encourage you to read our Proxy Statement in full before you vote!
+    .modal-content-buttons
+      %a.button.iagree.modal-close_button.button__red(href="#")
+        Continue
+        %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+          %g
+            %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+#modal_vote.modal_content
+  .modal-close
+  .modal_vote
+    .modal-content-header
+      %h2 Voting
+    .modal-content-text
+      .container
+        .row
+          .col-sm-6
+            %h3 Registered shareholders
+            %a.link.vote1.modal-close_button(href="#")
+              Vote
+              %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+                %g
+                  %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+            %p
+              %em
+                (you hold shares in your own name or through the Verizon Savings Plan)
+                %br>/
+                **Savings Plan shares must be voted before the close of business on May [__], 2016.
+          .col-sm-6
+            %h3 Beneficial shareholders
+            %a.link.vote1.modal-close_button(href="#")
+              Vote
+              %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+                %g
+                  %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+            %p
+              %em (you hold shares through a bank, broker or other institution)
+        .row
+          .col-sm-12
+            %p
+              %em To vote online, you will need to enter your control number to ensure the security of your vote. You will find your control number on your Proxy Card, Notice of Internet Availability of Proxy Materials or Voting Instruction Form, or included in your email notification.
+.header_empty
+%header.header.headroom
+  .header-content
+    .header-content-burger
+      .header-content-burger-click
+        .hamburger
+    %a.header-content-logo(href="index.html")
+      %img(alt="Verizon 2016" src="images/header/logo.svg")
+    %a.header-content-vote.button.button__red(href="#" data-modal="#modal_vote")
+      Vote
+      %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+        %g
+          %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+
+
+  .header-nav
+  %nav.header-nav
+    %ul
+      %li
+        %a(href="../AR" target="_blank") Home
+      %li
+        %a(href="../AR/letter.html" target="_blank") Chairman’s letter
+      %li
+        %a(href="#") Financial highlights
+      %li
+        %a(href="#") Corporate responsibility<br>highlights
+      %li
+        %a(href="../AM/") Annual shareholder<i class="icon-link pull-right "></i><br>meeting
+      %li
+        %a(href="#") Downloads
+  .header-nav_cover

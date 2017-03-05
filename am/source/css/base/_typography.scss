@@ -1,0 +1,100 @@
+h1, h2, h3, h4, h5, h6, p { padding: 0; margin: 0; }
+
+p {
+  padding-bottom: 20px;margin:0;
+}
+
+a { color: $color-primary; }
+
+h1, h2 {
+  font-weight: 600;
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 20px;
+  }
+}
+
+h1 {margin:0;padding:44px 0 21px;
+  font-size: $font-size-h1;
+  line-height: 80px;
+  font-weight: 400;
+}
+
+h2 {margin:39px 0 25px;
+  font-size: $font-size-h2;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+h3 {margin:11px 0;padding:0;font-size: 18px;line-height:22px;}
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: (20px);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// List options
+
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.list-unstyled {
+  @include list-unstyled;
+}
+
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.6;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}

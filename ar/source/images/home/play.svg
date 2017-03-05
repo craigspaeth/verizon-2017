@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="78px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-681.000000, -4461.000000)">
+            <g id="Section6" transform="translate(0.000000, 4100.000000)">
+                <g id="Button" transform="translate(682.000000, 362.000000)">
+                    <polyline id="Fill-4" fill="#FFFFFF" points="32.0248 22.399 51.9478 37.837 32.0248 53.273"></polyline>
+                    <path d="M52.9427,3.3726 C71.9767,11.7456 80.6187,33.9636 72.2457,52.9976 C63.8727,72.0306 41.6537,80.6736 22.6207,72.3006 C3.5867,63.9276 -5.0563,41.7086 3.3177,22.6756 C11.6907,3.6416 33.9087,-5.0014 52.9427,3.3726 Z" id="Stroke-5" stroke="#FFFFFF" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

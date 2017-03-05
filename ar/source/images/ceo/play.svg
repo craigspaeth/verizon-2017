@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="75px" viewBox="0 0 75 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="29.3475 23.113125 53.094375 23.113125 53.094375 52.989375 29.3475 52.989375"></polygon>
+    </defs>
+    <g id="Letter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Letter_1440" transform="translate(-80.000000, -577.000000)">
+            <g id="Group-2" transform="translate(80.000000, 577.000000)">
+                <circle id="Oval-93-Copy" fill="#FFFFFF" cx="37.5" cy="37.5" r="37.5"></circle>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-1"></g>
+                <path d="M29.3475,27.11625 C29.3475,23.4075 31.87125,22.021875 34.955625,24.039375 L50.77875,34.385625 C53.865,36.40125 53.865,39.699375 50.77875,41.71875 L34.955625,52.063125 C31.87125,54.080625 29.3475,52.695 29.3475,48.98625 L29.3475,27.11625 Z" id="Fill-1" fill="#D52B1E" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

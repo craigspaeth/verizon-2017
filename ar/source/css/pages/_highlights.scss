@@ -1,0 +1,88 @@
+$bar_height: 74px;
+$bar_year_width: 100px;
+$bar_line_interval: 40px;
+
+
+.ar_highlights{padding:0 0 100px;font-size:14px;line-height:21px;
+	.intro{height:600px;position:relative;color:#000;background:#B5AFAE center center no-repeat url(../images/highlights/intro.jpg);@include background-size(cover);
+		&-content{padding:234px 96px 0 96px;max-width:1440px;margin:0 auto;}
+		h1{font-size:48px;line-height:50px;padding:0;margin:0 0 14px;}
+		span{font-size:24px;line-height:30px;font-family:$font-primary-bold;}
+	}
+	.chart{max-width:1280px;margin:100px auto;padding:104px 109px 105px;background:#F6F6F6;font-family:$font-primary-bold;
+		&-header{padding:0 0 20px;
+			h2{font-size:30px;line-height:32px;margin:0;}
+		}
+		&-items{font-size:18px;line-height:$bar_height;color:#000;padding:0;position:relative;padding-right:33px;
+			&-bar{height:$bar_height;position:relative;margin:$bar_line_interval 0 0 0;
+				&-year{color:#fff;position:absolute;left:29px;right:0;top:0;margin:0;opacity:0;@include transition(.5s);}
+				&-value{opacity:0;position:absolute;right:0;bottom:0;margin:0 -1*$bar_year_width 0 0;width:$bar_year_width;text-align:left;line-height:$bar_height;padding-left:23px;}
+				&-fill{height:$bar_height;position:absolute;left:0;bottom:0;background:#9C9FA1;width:0%;@include transition(all .5s);}
+				&:first-child {
+					.chart-items-bar-fill{background:#D52B1E;}
+				}
+			}
+			&.active{
+				.chart-items-bar-year,
+				.chart-items-bar-value{opacity:1;}
+			}
+		}
+	}
+}
+.numbers{max-width:1280px;margin:0 auto;
+	&-line{font-size:24px;line-height:50px;color:#ADAFAF;padding:0 0 32px 109px;font-family:$font-primary-bold;font-weight:100;
+		b{color:#D52B1E;font-size:48px;font-weight:100;}
+		span{font-size:48px;}
+	}
+}
+.footnotes{padding:68px 109px 0;max-width:1280px;margin:0 auto;
+	p:last-child{padding-bottom:0;}
+}
+@media screen and (max-width: 1300px) {
+	.ar_highlights{padding:0 0 44px;
+		.intro{
+			&-content{padding:0 0 0 30px;position:absolute;left:0;right:0;bottom:177px;}
+		}
+
+
+		.chart{padding:43px 30px 50px;margin:51px 0 38px;
+			&-header{padding:0 0 2px;
+				h2{font-size:18px;line-height:32px;margin:0;}
+			}
+			&-items{padding-right:0;
+				&-bar{
+					&-value{margin:0;text-align:right;padding-right:30px;}
+				}
+			}
+		}
+	}
+
+	.numbers{
+		&-line{font-size:18px;padding:0 0 6px 30px;
+			b,
+			span{font-size:30px;}
+		}
+	}
+	.footnotes{padding:10px 30px 0;
+		p:last-child{padding-bottom:0;}
+	}
+}
+@media screen and (max-width: 767px) {
+	.ar_highlights{padding:0 0 50px;
+		.intro{height:510px;
+			&-content{padding:0 0 29px 18px;bottom:0;}
+			h1{font-size:36px;line-height:38px;}
+			span{font-size:18px;line-height:30px;}
+		}
+		.chart{margin:50px auto;padding:43px 18px 50px;
+		}
+	}
+
+	.numbers{
+		&-line{font-size:18px;line-height:32px;padding:0 18px 19px;
+			b,
+			span{font-size:30px;}
+		}
+	}
+	.footnotes{padding:30px 18px 0;}
+}

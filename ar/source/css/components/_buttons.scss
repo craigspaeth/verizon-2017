@@ -1,0 +1,9 @@
+.button{text-decoration:none;font-size:16px;line-height:21px;color:#fff;padding:16px 20px;width:300px;text-align:center;background:#4b4b4b;border:2px solid #4b4b4b;display:inline-block;cursor:pointer;@include transition(.2s);max-width:100%;
+  &:hover{text-decoration:none;background-color:#2a2a2a;border-color:#2a2a2a;}
+  &:active{background-color:#2a2a2a;border-color:#2a2a2a;}
+  &__red{background:#CD040B;border-color:#CD040B;
+    &:hover{background:#a80309;border-color:#a80309;}
+    &:active{background:#740206;border-color:#740206;}
+  }
+  img,svg {margin-left:8px;fill:#fff;}
+}
