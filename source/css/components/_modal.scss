@@ -35,7 +35,7 @@ html, body {
 
     &.out {
       transform: scale(1);
-      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      animation: unfoldOut 1s 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
       .modal-background {
         .modal {

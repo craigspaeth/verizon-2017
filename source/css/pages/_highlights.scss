@@ -31,7 +31,6 @@ $bar_line_interval: 40px;
     span {
       font-size: 24px;
       line-height: 30px;
-      font-family: $font-primary-bold;
     }
   }
 
@@ -40,7 +39,6 @@ $bar_line_interval: 40px;
     margin: 100px auto;
     padding: 104px 109px 105px;
     background: #F6F6F6;
-    font-family: $font-primary-bold;
 
     &-header {
       padding: 0 0 20px;
@@ -126,13 +124,10 @@ $bar_line_interval: 40px;
     line-height: 50px;
     color: #ADAFAF;
     padding: 0 0 32px 109px;
-    font-family: $font-primary-bold;
-    font-weight: 100;
 
     b {
       color: #D52B1E;
       font-size: 48px;
-      font-weight: 100;
     }
 
     span {

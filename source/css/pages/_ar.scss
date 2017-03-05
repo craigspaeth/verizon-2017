@@ -1,0 +1,26 @@
+.ar-slide {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  border-bottom: 1px solid red;
+  position: relative;
+
+  &-header {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    color: white;
+    font-weight: bold;;
+    @include translate(0, -50%);
+    @include type("largest");
+  }
+
+  &-sub-header {
+    margin-top: $margin-medium;
+    @include type("large");
+  }
+
+  &-header, &-sub-header {
+    max-width: 500px;
+  }
+}

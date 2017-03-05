@@ -83,7 +83,7 @@
       i {
         font-style: normal;
 
-        @include transition(0.3s);
+        @include transition(0.5s);
       }
 
       .fadeit i {
@@ -344,8 +344,7 @@
           position: absolute;
           left: 109px;
           top: 41px;
-          font-family: $font-primary-normal;
-        }
+       }
 
         &-header {
           font-size: 24px;
@@ -384,7 +383,6 @@
             span {
               font-size: 14px;
               line-height: 21px;
-              font-family: $font-primary-normal;
             }
           }
         }

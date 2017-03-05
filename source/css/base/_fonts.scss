@@ -1,32 +1,5 @@
-/**
- * @license
- * MyFonts Webfont Build ID 3187557, 2016-03-16T11:24:57-0400
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: HelveticaLT-Bold by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/helvetica/bold/
- * Copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted (c) 1985, 1987, 1989, 1990, 1997, 1998, 1999, 2003 Linotype Library GmbH, www.linotype.com. All rights reserved. This software is the property
- * Licensed pageviews: 500,000
- *
- * Webfont: AvenirNextLTPro-Bold by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
- * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
- * Licensed pageviews: 250,000
- *
- *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=3187557
- *
- * © 2016 MyFonts Inc
-*/
-
-/* @import must be at top of file, otherwise CSS will not work */
 @font-face {
-  font-family: "NHaasGroteskRg";
+  font-family: "NHaasGrotesk";
   font-style: normal;
   font-weight: normal;
   src: url("fonts/NHaasGroteskTXStd-55Rg-e1a14e2c.eot?#iefix") format("embedded-opentype"), url("fonts/NHaasGroteskTXStd-55Rg-9299d815.otf") format("opentype"), url("fonts/NHaasGroteskTXStd-55Rg-c9daa428.woff") format("woff"), url("fonts/NHaasGroteskTXStd-55Rg-9ea3fce8.ttf") format("truetype"), url("fonts/NHaasGroteskTXStd-55Rg-3a6526a6.svg#NHaasGroteskTXStd-55Rg") format("svg");
@@ -34,67 +7,7 @@
 
 @font-face {
   font-family: "NHaasGrotesk";
-  font-style: bold;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: bold;
   src: url("fonts/NHaasGroteskTXStd-75Bd-0b2e8ce9?#iefix") format("embedded-opentype"), url("fonts/NHaasGroteskTXStd-75Bd-51d0d9a3.otf") format("opentype"), url("fonts/NHaasGroteskTXStd-75Bd-5d3a325d.woff") format("woff"), url("fonts/NHaasGroteskTXStd-75Bd-f88ef2c0.ttf") format("truetype"), url("fonts/NHaasGroteskTXStd-75Bd-ac500704.svg#NHaasGroteskTXStd-55Rg") format("svg");
-}
-
-/**
- * @license
- * MyFonts Webfont Build ID 3286371, 2016-09-21T16:49:23-0400
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: AvenirNextLTPro-Demi by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-demi/
- * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
- * Licensed pageviews: 250,000
- *
- *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=3286371
- *
- * © 2016 MyFonts Inc
-*/
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/322563");
-
-@font-face {
-  font-family: 'AvenirNextLTPro-Demi';
-  src: url("webfonts/322563_0_0.eot");
-  src: url("webfonts/322563_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/322563_0_0.woff2") format("woff2"), url("webfonts/322563_0_0.woff") format("woff"), url("webfonts/322563_0_0.ttf") format("truetype");
-}
-
-/**
- * @license
- * MyFonts Webfont Build ID 3187560, 2016-03-16T11:31:17-0400
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: AvenirNextLTPro-Regular by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
- * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
- * Licensed pageviews: 250,000
- *
- *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=3187560
- *
- * © 2016 MyFonts Inc
-*/
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/30a368");
-
-@font-face {
-  font-family: 'AvenirNextLTPro-Regular';
-  src: url("webfonts/30A368_0_0.eot");
-  src: url("webfonts/30A368_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/30A368_0_0.woff2") format("woff2"), url("webfonts/30A368_0_0.woff") format("woff"), url("webfonts/30A368_0_0.ttf") format("truetype");
 }
