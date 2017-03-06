@@ -19,6 +19,12 @@ $(function () {
   })
 
   // Video controls
+  var closeVideo = function ($main) {
+    var vid = $main.find('.ar-slide-video').get(0)
+    vid.pause()
+    vid.currentTime = 0
+    $main.hide()
+  }
   $('.ar-slide-video-controls-pause').click(function () {
     var $play = $(this).siblings('.ar-slide-video-controls-play')
     var $video = $(this).parent().siblings('.ar-slide-video')
@@ -49,26 +55,29 @@ $(function () {
   })
   $('.ar-slide-video-controls-close').click(function () {
     var $main = $(this).parent('.ar-slide-video-main')
-    var vid = $main.find('.ar-slide-video').get(0)
-    vid.pause()
-    vid.currentTime = 0
-    $main.hide()
+    closeVideo($main)
   })
 
   // Scroll jacking
   var slideIndex = 0
   var sliding = false
 
-  var scrollToSlide = function (i) {
+  var scrollToSlide = function (i, _stopVideo) {
     if (sliding) return
     sliding = true
     slideIndex = i
-    $('.ar-slide > .ar-slide-video').each(function () { $(this).get(0).pause() })
+    var stopVideo = _stopVideo === false ? false : true
+    if (stopVideo) {
+      $('.ar-slide > .ar-slide-video').each(function () { $(this).get(0).pause() })
+    }
     $('body, html').animate({
       scrollTop: ($(window).height() * i) - ($('.header').height() * i)
     }, 350, 'swing', function () {
       sliding = false
-      $('.ar-slide > .ar-slide-video').each(function () { $(this).get(0).play() })
+      if (stopVideo) {
+        $('.ar-slide > .ar-slide-video').each(function () { $(this).get(0).play() })
+        $('.ar-slide-video-main').each(function () { closeVideo($(this)) })
+      }
     })
     $('.ar-dot').removeClass('ar-dot-active')
     $('.ar-dot:nth-child(' + (i + 1) + ')').addClass('ar-dot-active')
@@ -106,6 +115,6 @@ $(function () {
 
   // On resize window
   $(window).on('resize', _.debounce(function () {
-    scrollToSlide(slideIndex)
+    scrollToSlide(slideIndex, false)
   }, 300))
 });

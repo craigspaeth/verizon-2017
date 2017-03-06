@@ -1,9 +1,9 @@
 .ar-slide
   %video.ar-slide-video{ autoplay: true, loop: true }
-    %source{ src: "videos/#{video}-bg.mp4", type: "video/mp4" }
+    %source{ src: "videos/#{video}-bg.min.mp4", type: "video/mp4" }
   .ar-slide-video-main
     %video.ar-slide-video
-      %source{ src: "videos/#{video}.mp4", type: "video/mp4" }
+      %source{ src: "videos/#{video}.min.mp4", type: "video/mp4" }
     .ar-slide-video-controls-close
     .ar-slide-video-controls
       .ar-slide-video-controls-pause
@@ -13,7 +13,4 @@
   %h2.ar-slide-header
     = header
     .ar-slide-sub-header= subheader
-    .ar-slide-play-mobile
-      Play video
-      %img.ar-slide-play-mobile-icon{ src: "images/home/more_red.svg" }
   %img.ar-slide-play-button{ src: "images/play.svg" }

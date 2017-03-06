@@ -2,8 +2,16 @@
 $gray-light: #f6f6f6;
 $gray-medium: #dadada;
 
+// Breakpoints
+$laptop: 1200px;
+$ipad: 1024px;
+$ipad-tall: 768px;
+$iphone: 667px;
+
+
 // Measurements
 $header-height: 100px;
+$header-height-tablet: 85px;
 $header-height-mobile: 70px;
 $margin-large: 90px;
 $margin-medium: 30px;

@@ -205,20 +205,6 @@
       left: $margin-medium + 2px;
     }
   }
-
-  &-play-mobile {
-    display: none;
-    margin-top: $margin-small;
-
-    @include type("medium");
-
-    img {
-      position: relative;
-      top: 3px;
-      height: 21px;
-      left: 6px;
-    }
-  }
 }
 
 .ar-footlinks {
@@ -267,22 +253,7 @@
   }
 }
 
-@media (max-width: 900px) {
-  .ar-slide-play-button {
-    left: 75%;
-  }
-
-  .ar-footlink {
-    width: 100%;
-    padding: 0 0 $margin-medium 0 !important;
-
-    // Override nth-child selector
-    border-bottom: 1px solid $gray-medium;
-    margin-bottom: $margin-medium;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: $laptop) {
   .ar-slide {
     &-header {
       max-width: 380px;
@@ -297,6 +268,9 @@
       @include type("medium-small");
     }
   }
+}
+
+@media (max-width: $ipad) {
 
   .ar-footlink-a {
     font-size: 16px;
@@ -309,9 +283,28 @@
   .ar-footlink-header {
     @include type("medium");
   }
+
+  .ar-footlink-sub-header {
+    @include type("medium-small");
+  }
+
+  .ar-footlink {
+    width: 100%;
+    padding: 0 0 $margin-medium 0 !important;
+
+    // Override nth-child selector
+    border-bottom: 1px solid $gray-medium;
+    margin-bottom: $margin-medium;
+  }
+
+  .ar-slide-header {
+    bottom: ($margin-medium * 2);
+    transform: translate(0,0);
+    top: auto;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $ipad-tall) {
   .ar {
     padding-top: $header-height-mobile;
 
@@ -325,8 +318,6 @@
   }
 
   .ar-slide-hero-link {
-    margin-top: $margin-small;
-
     @include type("medium");
   }
 
@@ -351,14 +342,6 @@
       margin-top: $margin-small;
     }
 
-    &-play-button {
-      display: none;
-    }
-
-    &-play-mobile {
-      display: block;
-    }
-
     &-video {
       width: 100vw;
       height: auto;
@@ -369,22 +352,27 @@
   }
 }
 
-@media (max-width: 667px) {
+@media (max-width: $iphone) {
   .ar-slide {
     &-header {
       left: $margin-small;
-
+      bottom: $margin-small;
+      @include translate(0,0);
       @include type("large");
     }
 
     &-sub-header {
       left: $margin-small;
-
       @include type("medium-small");
     }
+  }
 
-    &-play-mobile {
-      @include type("medium-small");
-    }
+  .ar-slide-hero-link {
+    margin-top: $margin-small;
+    @include type("medium-small");
+  }
+
+  .ar-slide-play-button {
+    width: 60px;
   }
 }

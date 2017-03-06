@@ -15,5 +15,12 @@ Verizon Annual Report project.
 
 You can use use ffmpeg to compress and convert video appropriate for HTML5 .mp4 embedding.
 
-* Install ffmpeg `brew install ffmpeg`
-* `ffmpeg -i <filename>.m4v -vcodec libx264 -crf 25 -s 1280x720 <filename>.mp4
+Install ffmpeg `brew install ffmpeg`
+
+Run this script
+````
+for f in source/videos/*
+do
+  ffmpeg -i $f -vcodec libx264 -crf 25 -s 1280x720 ${f%.*}.min.mp4
+done
+````

@@ -132,6 +132,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     &-label {
       @include type("medium");
       margin-left: 13px;
+      line-height: 26px;
     }
 
     &-skip-icon {
@@ -222,22 +223,42 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     height: 100%;
   }
 
-  @media (max-width: 768px) {
-    height: 70px;
-
+  @media (max-width: $ipad) {
     &-content-skip {
       display: none;
     }
+  }
+
+  @media (max-width: $ipad-tall) {
+
+    &-content-burger {
+      @include scale(0.89);
+    }
+
+    &-content-logo {
+      margin-left: 27px;
+      width: 138px;
+      top: -2px;
+    }
+
+    &-content-label {
+      @include type("medium-small");
+      line-height: 28px;
+    }
+  }
+
+  @media (max-width: $iphone) {
+    height: $header-height-mobile;
 
     &-content-burger {
       margin-left: $margin-small;
       top: -11px;
 
-      @include scale(0.85);
+      @include scale(0.68);
     }
 
     &-content-logo {
-      width: 128px;
+      width: 90px;
       margin-left: 15px;
       padding-top: 17px;
       top: -3px;
@@ -249,16 +270,11 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     }
 
     &-content-label {
-      @include type("medium-body");
+      @include type("body");
+      line-height: 26px;
       font-weight: bold;
       position: relative;
       top: -3px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    &-content-skip {
-      top: 3px;
     }
   }
 }
