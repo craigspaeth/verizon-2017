@@ -10,7 +10,9 @@
     height: 600px;
     position: relative;
     color: #fff;
-    background: #B5AFAE center 0 no-repeat url(../images/ceo/intro.jpg);
+    background: #B5AFAE center 0 no-repeat url(../images/home/hero.jpg);
+    background-position: center 25%;
+    background-size: 120%;
 
     @include background-size(cover);
 
@@ -31,22 +33,27 @@
       max-width: 1440px;
       margin: 0 auto;
     }
-
-    h1 {
-      @include type("larger");
-      padding: 0;
-      margin: 0;
-    }
   }
 
   .intro-header {
+    padding: 0;
+    margin: 0;
+
     @include type("larger");
+
     max-width: 400px;
+
+    &-left-quote {
+      position: absolute;
+      margin-left: -1 * $margin-medium;
+
+      @include type("larger");
+    }
   }
 
   .callout {
     background: #F6F6F6;
-    padding: 100px 0 80px;
+    padding: $margin-large 0;
     margin-bottom: 100px;
 
     &-container {
@@ -54,8 +61,9 @@
       margin: 0 auto;
     }
 
-    h2 {;
+    h2 {
       margin: 0 0 28px;
+
       @include type("larger");
     }
 
@@ -90,6 +98,7 @@
     p:last-child {
       padding-bottom: 0;
     }
+
     p {
       padding-bottom: 1em;
     }
@@ -133,6 +142,7 @@
 
     h3 {
       margin: 0;
+
       @include type("largish");
     }
 
@@ -142,7 +152,9 @@
 
     p {
       margin: 0;
+
       @include type("large");
+
       max-width: 300px;
       color: #D52B1E;
     }
@@ -253,6 +265,7 @@
 
       h2 {
         @include type("large");
+
         margin: 0 0 24px;
       }
     }
@@ -292,6 +305,7 @@
 
       h3 {
         margin: 0;
+
         @include type("medium");
       }
 
@@ -343,6 +357,7 @@
 
       h2 {
         @include type("large");
+
         margin: 0 0 24px;
       }
     }
@@ -369,6 +384,7 @@
 
       h3 {
         margin: 0;
+
         @include type("medium");
       }
 

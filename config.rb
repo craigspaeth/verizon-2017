@@ -53,7 +53,7 @@ configure :build do
   require "uglifier"
   activate :minify_javascript,
     compressor: proc {
-     ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+     ::Uglifier.new()
     }
 end
 

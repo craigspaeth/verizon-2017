@@ -7,17 +7,16 @@
   z-index: 99;
 
   &-container {
-    max-width: 1440px;
     position: relative;
-    padding: 44px 258px 40px 220px;
+    padding: 44px 0 40px 0;
     margin: 0 auto;
   }
 
   &-logo {
     width: 138px;
     position: absolute;
-    top: 31px;
-    left: 90px;
+    top: 33px;
+    left: $margin-large;
 
     img {
       width: 100%;
@@ -26,8 +25,10 @@
   }
 
   &-links {
-    text-align: right;
-
+    position: relative;
+    top: 2px;
+    text-align: center;
+    font-weight: bold;
     a {
       display: inline-block;
       padding: 0 0 0 25px;
@@ -41,8 +42,8 @@
 
   &-copy {
     position: absolute;
-    right: 90px;
-    top: 44px;
+    right: $margin-large;
+    top: 46px;
   }
 }
 
@@ -58,15 +59,19 @@
     }
 
     &-links {
-      text-align: left;
+      text-align: center;
       overflow: hidden;
 
       a {
         display: block;
         padding: 0;
         margin-bottom: 18px;
-        width: 222px;
+        margin-right: $margin-medium;
         float: left;
+
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
 
@@ -85,10 +90,10 @@
     }
 
     &-logo {
-      top: auto;
-      bottom: 82px;
-      width: 125px;
-      left: 18px;
+      width: 120px;
+      position: absolute;
+      top: 37px;
+      left: $margin-large;
     }
 
     &-links {

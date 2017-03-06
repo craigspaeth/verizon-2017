@@ -28,11 +28,14 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     @include box-shadow(0 0 0 #000);
   }
 
+  &-content, &-nav {
+    @include box-shadow(2px 2px 15px rgba(0,0,0,0.1));
+  }
+
   &-content {
     height: 100%;
     position: relative;
     z-index: 9999;
-    @include box-shadow(2px 2px 15px rgba(0,0,0,0.1));
 
     &-burger {
       float: left;
@@ -187,7 +190,6 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     background: #fff;
     overflow: hidden;
     @include translate(0, -100%);
-    @include box-shadow(0 0 0 #000);
 
     ul {
       margin: 0;
@@ -220,7 +222,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     height: 100%;
   }
 
-  @media (max-width: 758px) {
+  @media (max-width: 768px) {
     height: 70px;
 
     &-content-skip {
@@ -238,7 +240,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
       width: 128px;
       margin-left: 15px;
       padding-top: 17px;
-      top: -4px;
+      top: -3px;
     }
 
     &-content-text {
@@ -247,12 +249,14 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     }
 
     &-content-label {
-      @include type("medium-small");
-      font-size: 16px;
+      @include type("medium-body");
+      font-weight: bold;
+      position: relative;
+      top: -3px;
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     &-content-skip {
       top: 3px;
     }
