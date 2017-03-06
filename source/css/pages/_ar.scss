@@ -161,6 +161,26 @@
     }
 
     &-close {
+      background-image: url(../images/controls/close.svg);
+    }
+
+    &-play {
+      background-image: url(../images/controls/play.svg);
+    }
+
+    &-pause {
+      background-image: url(../images/controls/pause.svg);
+    }
+
+    &-mute {
+      background-image: url(../images/controls/mute.svg);
+    }
+
+    &-sound {
+      background-image: url(../images/controls/sound.svg);
+    }
+
+    &-close {
       width: 27px;
     }
 
