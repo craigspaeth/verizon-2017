@@ -4,12 +4,16 @@
   .ar-slide-video-main
     %video.ar-slide-video
       %source{ src: "videos/#{video}.mp4", type: "video/mp4" }
+    .ar-slide-video-controls-close{ style: "background-image: url(../images/controls/close.svg)" }
     .ar-slide-video-controls
-      %img.ar-slide-video-controls-pause{ src: "images/controls/pause.svg" }
-      %img.ar-slide-video-controls-play{ src: "images/controls/play.svg" }
-      %img.ar-slide-video-controls-sound{ src: "images/controls/sound.svg" }
-      %img.ar-slide-video-controls-mute{ src: "images/controls/mute.svg" }
+      .ar-slide-video-controls-pause{ style: "background-image: url(../images/controls/pause.svg)" }
+      .ar-slide-video-controls-play{ style: "background-image: url(../images/controls/play.svg)" }
+      .ar-slide-video-controls-sound{ style: "background-image: url(../images/controls/sound.svg)" }
+      .ar-slide-video-controls-mute{ style: "background-image: url(../images/controls/mute.svg)" }
   %h2.ar-slide-header
     = header
     .ar-slide-sub-header= subheader
+    .ar-slide-play-mobile
+      Play video
+      %img.ar-slide-play-mobile-icon{ src: "images/home/more_red.svg" }
   %img.ar-slide-play-button{ src: "images/play.svg" }

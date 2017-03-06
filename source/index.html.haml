@@ -1,6 +1,10 @@
 - lvl1 = "home"
 = partial :header, locals: { :lvl1 => lvl1 }
 .ar
+  .ar-dots
+    - (1..6).each do |i|
+      .ar-dot
+
   .ar-slide.ar-slide-hero
     %h2.ar-slide-header
       A better future for everyone
