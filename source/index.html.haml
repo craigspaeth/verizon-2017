@@ -23,4 +23,9 @@
 
   = partial :arslide, locals: { video: 'areas-of-growth', header: 'The evolution of Verizon', subheader: 'Verizon is a global technology company delivering the promise of the digital world to millions of customers every day. Watch this video to see how it all began.' }
 
+.ar-footlinks
+  = partial :arfootlink, locals: { header: "Financial highlights", paragraph: "We’ve stepped up to the challenge of positioning Verizon to be an innovator in the digital-first mobile future while delivering another year of strong operating and financial performance.", href: "financial-highlights.html", link: "View our 2016 highlights" }
+  = partial :arfootlink, locals: { header: "Corporate responsibility highlights", paragraph: "We make it our business to use our assets to make the world a better place for us, and for future generations.", href: "goals.html", link: "Our goals and progress" }
+  = partial :arfootlink, locals: { header: "Annual shareholder meeting", paragraph: "Verizon’s annual shareholder meeting will be held on May 4, 2017 in Irving, Texas. Learn more about our directors, the meeting agenda and voting.", href: "learn-more.html", link: "Learn more" }
+
 = partial :footer, locals: { :lvl1 => lvl1 }

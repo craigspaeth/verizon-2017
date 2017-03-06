@@ -10,3 +10,10 @@ Verizon Annual Report project.
 4. Install dependencies `bundle install`
 5. Start the middleman server `middleman server`
 6. Get to work `open http://localhost:4567`
+
+## Converting & compressing video
+
+You can use use ffmpeg to compress and convert video appropriate for HTML5 .mp4 embedding.
+
+* Install ffmpeg `brew install ffmpeg`
+* `ffmpeg -i <filename>.m4v -vcodec libx264 -crf 25 -s 1280x720 <filename>.mp4

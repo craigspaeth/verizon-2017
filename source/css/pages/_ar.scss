@@ -17,6 +17,7 @@
     height: 12px;
     width: 12px;
     cursor: pointer;
+
     @include border-radius(50px);
 
     &-active {
@@ -79,7 +80,7 @@
   &-header {
     position: absolute;
     top: 50%;
-    left: 90px;
+    left: $margin-large;
     color: white;
     font-weight: bold;
     z-index: 1;
@@ -138,6 +139,7 @@
     min-height: auto;
     min-width: auto;
     object-fit: contain;
+
     &:before {
       display: none;
     }
@@ -181,7 +183,9 @@
   }
 
   &-play-mobile {
+    display: none;
     margin-top: $margin-small;
+
     @include type("medium-small");
 
     img {
@@ -189,6 +193,52 @@
       top: 4px;
       height: 18px;
       left: 6px;
+    }
+  }
+}
+
+.ar-footlinks {
+  margin: $margin-large;
+}
+
+.ar-footlink {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+
+  &:nth-child(1) {
+    padding-right: $margin-medium;
+  }
+
+  &:nth-child(2) {
+    padding-left: $margin-medium;
+    padding-right: $margin-medium;
+  }
+
+  &:nth-child(3) {
+    padding-left: $margin-medium;
+  }
+
+  &-header {
+    margin-bottom: $margin-medium;
+
+    @include type("large");
+  }
+
+  &-p {
+    margin-bottom: $margin-medium;
+
+    @include type("body");
+  }
+
+  &-a {
+    @include type("medium-small");
+
+    &-icon {
+      height: 18px;
+      position: relative;
+      top: 3px;
+      left: 5px;
     }
   }
 }
@@ -203,11 +253,24 @@
   .ar-slide-play-button {
     left: 75%;
   }
+  .ar-footlink {
+    width: 100%;
+    padding: 0 0 $margin-medium 0 !important; // Override nth-child selector
+    border-bottom: 1px solid $gray-medium;
+    margin-bottom: $margin-medium;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .ar-slide-header {
+
+  }
+}
+
+@media (max-width: 767px) {
   .ar {
     padding-top: $header-height-mobile;
+
     &-dots {
       display: none;
     }
@@ -231,9 +294,7 @@
     &-header {
       left: $margin-small;
       width: calc(100% - #{$margin-small * 2});
-      // bottom: $margin-small;
-      // top: auto;
-      // @include translate(0, 0);
+
       @include type("large");
     }
 
@@ -248,12 +309,16 @@
       display: none;
     }
 
+    &-play-mobile {
+      display: block;
+    }
+
     &-video {
       width: 100vw;
       height: auto;
       position: absolute;
       top: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 }

@@ -56,7 +56,10 @@ $(function () {
   })
 
   // Scroll jacking
-  if (window.location.pathname !== '/') return
+  if (
+    window.location.pathname !== '/' &&
+    window.location.pathname !== '/index.html'
+  ) return
   var slideIndex = 0
   var sliding = false
 
@@ -64,10 +67,12 @@ $(function () {
     if (sliding) return
     sliding = true
     slideIndex = i
+    $('.ar-slide > .ar-slide-video').each(function () { $(this).get(0).pause() })
     $('body, html').animate({
       scrollTop: ($(window).height() * i) - ($('.header').height() * i)
-    }, 250, 'swing', function () {
+    }, 350, 'swing', function () {
       sliding = false
+      $('.ar-slide > .ar-slide-video').each(function () { $(this).get(0).play() })
     })
     $('.ar-dot').removeClass('ar-dot-active')
     $('.ar-dot:nth-child(' + (i + 1) + ')').addClass('ar-dot-active')
@@ -90,7 +95,7 @@ $(function () {
   $(window).on('mousewheel', _.debounce(function (e) {
     var dir = e.originalEvent.wheelDelta > 0 ? 'up' : 'down'
     slideDir(dir)
-  }, 50, true))
+  }, 40, true))
 
   // Up and down arrow slide
   $(document).keydown(_.debounce(function (e) {

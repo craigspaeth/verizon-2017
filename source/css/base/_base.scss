@@ -1,10 +1,13 @@
-// Variables
-$z-index: ("loader-overlay": 1, "loader-bg": 5, "loader-container": 10, "nav-index": 10, "nav-tabs-xs-overlay": 20);
-$margin-medium: 30px;
-$margin-small: 20px;
+// Colors
 $gray-light: #f6f6f6;
+$gray-medium: #dadada;
+
+// Measurements
 $header-height: 100px;
 $header-height-mobile: 70px;
+$margin-large: 90px;
+$margin-medium: 30px;
+$margin-small: 20px;
 
 // Mixins
 @mixin type($type) {
@@ -12,6 +15,14 @@ $header-height-mobile: 70px;
     font-size: 60px;
     font-weight: bold;
     line-height: 62px;
+  } @else if $type == "larger" {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 50px;
+  } @else if $type == "largish" {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
   } @else if $type == "large" {
     font-size: 30px;
     font-weight: bold;
@@ -20,10 +31,18 @@ $header-height-mobile: 70px;
     font-size: 24px;
     font-weight: bold;
     line-height: 28px;
+  } @else if $type == "medium-body" {
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: normal;
   } @else if $type == "medium-small" {
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
+  } @else if $type == "body" {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
   }
   text-decoration: none;
 }

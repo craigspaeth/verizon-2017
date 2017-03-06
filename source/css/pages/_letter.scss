@@ -1,6 +1,5 @@
 .ar_letter {
-  font-size: 14px;
-  line-height: 21px;
+  @include type("body");
 
   img {
     max-width: 100%;
@@ -11,7 +10,7 @@
     height: 600px;
     position: relative;
     color: #fff;
-    background: #B5AFAE center 0 no-repeat url(../images/ceo/intro_.jpg);
+    background: #B5AFAE center 0 no-repeat url(../images/ceo/intro.jpg);
 
     @include background-size(cover);
 
@@ -34,11 +33,15 @@
     }
 
     h1 {
-      font-size: 48px;
-      line-height: 50px;
+      @include type("larger");
       padding: 0;
       margin: 0;
     }
+  }
+
+  .intro-header {
+    @include type("larger");
+    max-width: 400px;
   }
 
   .callout {
@@ -51,15 +54,13 @@
       margin: 0 auto;
     }
 
-    h2 {
-      font-size: 48px;
-      line-height: 50px;
+    h2 {;
       margin: 0 0 28px;
+      @include type("larger");
     }
 
     p {
-      font-size: 21px;
-      line-height: 28px;
+      @include type("medium-body");
     }
   }
 
@@ -88,6 +89,9 @@
   .letter-content {
     p:last-child {
       padding-bottom: 0;
+    }
+    p {
+      padding-bottom: 1em;
     }
   }
 
@@ -129,8 +133,7 @@
 
     h3 {
       margin: 0;
-      font-size: 36px;
-      line-height: 48px;
+      @include type("largish");
     }
 
     img {
@@ -139,8 +142,7 @@
 
     p {
       margin: 0;
-      font-size: 30px;
-      line-height: 32px;
+      @include type("large");
       max-width: 300px;
       color: #D52B1E;
     }
@@ -250,8 +252,7 @@
       }
 
       h2 {
-        font-size: 30px;
-        line-height: 32px;
+        @include type("large");
         margin: 0 0 24px;
       }
     }
@@ -291,8 +292,7 @@
 
       h3 {
         margin: 0;
-        font-size: 24px;
-        line-height: 26px;
+        @include type("medium");
       }
 
       img {
@@ -330,8 +330,7 @@
       }
 
       h1 {
-        font-size: 30px;
-        line-height: 32px;
+        @include type("large");
       }
     }
 
@@ -343,8 +342,7 @@
       }
 
       h2 {
-        font-size: 30px;
-        line-height: 32px;
+        @include type("large");
         margin: 0 0 24px;
       }
     }
@@ -371,8 +369,7 @@
 
       h3 {
         margin: 0;
-        font-size: 24px;
-        line-height: 26px;
+        @include type("medium");
       }
 
       img {

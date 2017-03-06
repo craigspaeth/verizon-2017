@@ -7,9 +7,10 @@
       %img(alt="Verizon 2016" src="images/header/logo.svg")
     .header-content-text
       .header-content-label 2016 Annual Report
-      %a.header-content-skip{ href: "letter.html" }
-        Skip to Chairman’s letter
-        %img.header-content-skip-icon{ src:"images/home/more_red.svg" }
+      - if lvl1 == 'home'
+        %a.header-content-skip{ href: "letter.html" }
+          Skip to Chairman’s letter
+          %img.header-content-skip-icon{ src:"images/home/more_red.svg" }
 
 
   %nav.header-nav

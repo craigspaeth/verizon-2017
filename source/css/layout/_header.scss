@@ -32,6 +32,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     height: 100%;
     position: relative;
     z-index: 9999;
+    @include box-shadow(2px 2px 15px rgba(0,0,0,0.1));
 
     &-burger {
       float: left;
@@ -132,7 +133,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
 
     &-skip-icon {
       height: 18px;
-      top: 4px;
+      top: 3px;
       position: relative;
       margin-left: 4px;
     }
@@ -230,13 +231,14 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
       margin-left: $margin-small;
       top: -11px;
 
-      @include scale(0.9);
+      @include scale(0.85);
     }
 
     &-content-logo {
-      width: 100px;
+      width: 128px;
       margin-left: 15px;
       padding-top: 17px;
+      top: -4px;
     }
 
     &-content-text {
@@ -245,9 +247,8 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     }
 
     &-content-label {
-      position: absolute;
-      right: $margin-small;
       @include type("medium-small");
+      font-size: 16px;
     }
   }
 

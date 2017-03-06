@@ -21,6 +21,11 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  activate :minify_html do |html|
+    html.remove_multi_spaces = true
+    html.remove_comments = true
+    html.remove_intertag_spaces = true
+  end
 end
 
 ###
@@ -38,6 +43,11 @@ end
 configure :build do
   # Minify CSS on build
   activate :minify_css
+  activate :minify_html do |html|
+    html.remove_multi_spaces = true
+    html.remove_comments = true
+    html.remove_intertag_spaces = true
+  end
 
   # Minify Javascript on build
   require "uglifier"
