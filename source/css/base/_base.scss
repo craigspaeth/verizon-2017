@@ -1,6 +1,9 @@
 // Colors
 $gray-light: #f6f6f6;
 $gray-medium: #dadada;
+$red-primary: #CD040B;
+$red-secondary: #a80309;
+$red-tertiary: #990308;
 
 // Breakpoints
 $laptop: 1200px;
@@ -8,12 +11,13 @@ $ipad: 1024px;
 $ipad-tall: 768px;
 $iphone: 667px;
 
-
 // Measurements
 $header-height: 100px;
 $header-height-tablet: 85px;
 $header-height-mobile: 70px;
+$margin-larger: 120px;
 $margin-large: 90px;
+$margin-medium-large: 50px;
 $margin-medium: 30px;
 $margin-small: 20px;
 
@@ -39,19 +43,27 @@ $margin-small: 20px;
     font-size: 24px;
     font-weight: bold;
     line-height: 28px;
-  } @else if $type == "medium-body" {
-    font-size: 21px;
-    line-height: 28px;
-    font-weight: normal;
   } @else if $type == "medium-small" {
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
+  } @else if $type == "medium-body" {
+    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: normal;
+  } @else if $type == "mediumish-body" {
+    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: normal;
   } @else if $type == "body" {
+    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
   } @else if $type == "body-small" {
+    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
     font-size: 12px;
     line-height: 18px;
     font-weight: normal;

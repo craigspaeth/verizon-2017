@@ -29,7 +29,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
   }
 
   &-content, &-nav {
-    @include box-shadow(2px 2px 15px rgba(0,0,0,0.1));
+    @include box-shadow(2px 2px 15px rgba(0, 0, 0, 0.1));
   }
 
   &-content {
@@ -113,6 +113,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
         width: 100%;
       }
     }
+
     &-text {
       position: relative;
       top: 39px;
@@ -127,11 +128,13 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     &-skip {
       right: $margin-medium;
       position: absolute;
+
       @include type("medium-small");
     }
 
     &-label {
       @include type("medium");
+
       margin-left: 13px;
       line-height: 26px;
     }
@@ -146,6 +149,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
 
   &-nav {
     border-top: 1px solid $gray-light;
+
     @include transition(all 0.4s);
   }
 
@@ -187,10 +191,19 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
     }
   }
 
+  &-am-vote {
+    position: absolute;
+    top: 22px;
+    right: $margin-medium;
+    font-weight: bold;
+    z-index: 9999;
+  }
+
   &-nav {
     position: absolute;
     background: #fff;
     overflow: hidden;
+
     @include translate(0, -100%);
 
     ul {
@@ -244,12 +257,23 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
 
     &-content-label {
       @include type("medium-small");
+
       line-height: 28px;
     }
   }
 
   @media (max-width: $iphone) {
     height: $header-height-mobile;
+
+    &-am-vote {
+      top: 17px;
+      right: 17px;
+      width: 100px;
+
+      .am-vote-link {
+        padding: 5px;
+      }
+    }
 
     &-content-burger {
       margin-left: $margin-small;
@@ -272,6 +296,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
 
     &-content-label {
       @include type("body");
+
       line-height: 26px;
       font-weight: bold;
       position: relative;

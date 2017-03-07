@@ -2,63 +2,73 @@
 
 = partial(:"header", :locals => { :lvl1 => lvl1 })
 .am-container
-  .screen
-    .am-info
-      .am-info-bg
-      %h1.am-info-header
-        Our Annual
-        %br>/
-        Meeting
-      .am-info-when
-        May 4, 2017
-        %br>/
-        8:30 AM, local time
-        %br>/
-        %a(href="event.ics")
-          Add to calendar
-          %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
-            %g
-              %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+  .am-modal-container
+    .am-modal
+      %img.am-modal-close{ src: "images/am/close.svg" }
+      %h1.am-modal-h1 Just so you know
+      %p.am-modal-p The purpose of this website is to provide you with information about Verizon’s 2017 annual meeting. Among other things, we discuss the meeting agenda, including the management and shareholder proposals. We also explain how you can vote. This website is not intended to be a substitute for reading Verizon’s 2017 Proxy Statement, which includes information required by the Securities and Exchange Commission. We encourage you to read our proxy statement in full before you vote!
+      %button.button.am-modal-continue.button__red
+        Continue
+        %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+          %g
+            %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
 
-      .am-info-where
-        Dallas Marriott Las Colinas
-        %br>/
-        223 West Las Colinas Boulevard 
-        %br>/
-        Irving, Texas 75039
-        %br>/
-        %a(target="_blank" href="https://goo.gl/maps/8WsRVkrqVJR2")
-          View on map
-          %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
-            %g
-              %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
-      .am-info-countdown(data-date="2017/05/04")
-        .am-info-countdown-days
-          .am-info-countdown-days-content
-            96
-          .am-info-countdown-days-header
-            Day<i>s</i>
-        .am-info-countdown-colon
-          = ":"
-        .am-info-countdown-hours
-          .am-info-countdown-hours-content
-            22
-          .am-info-countdown-hours-header
-            Hour<i>s</i>
-        .am-info-countdown-colon
-          = ":"
-        .am-info-countdown-minutes
-          .am-info-countdown-minutes-content
-            33
-          .am-info-countdown-minutes-header
-            Minute<i>s</i>
-        .am-info-countdown-colon
-          = ":"
-        .am-info-countdown-seconds
-          .am-info-countdown-seconds-content
-            51
-          .am-info-countdown-seconds-header
-            Second<i>s</i>
+  .am-info
+    .am-info-bg
+    %h1.am-info-header
+      Our Annual
+      %br>/
+      Meeting
+    .am-info-when
+      May 4, 2017
+      %br>/
+      8:30 AM, local time
+      %br>/
+      %a(href="event.ics")
+        Add to calendar
+        %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+          %g
+            %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+
+    .am-info-where
+      Dallas Marriott Las Colinas
+      %br>/
+      223 West Las Colinas Boulevard 
+      %br>/
+      Irving, Texas 75039
+      %br>/
+      %a(target="_blank" href="https://goo.gl/maps/8WsRVkrqVJR2")
+        View on map
+        %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
+          %g
+            %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+    .am-info-countdown(data-date="2017/05/04")
+      .am-info-countdown-days
+        .am-info-countdown-days-content
+          96
+        .am-info-countdown-days-header
+          Day<i>s</i>
+      .am-info-countdown-colon
+        = ":"
+      .am-info-countdown-hours
+        .am-info-countdown-hours-content
+          22
+        .am-info-countdown-hours-header
+          Hour<i>s</i>
+      .am-info-countdown-colon
+        = ":"
+      .am-info-countdown-minutes
+        .am-info-countdown-minutes-content
+          33
+        .am-info-countdown-minutes-header
+          Minute<i>s</i>
+      .am-info-countdown-colon
+        = ":"
+      .am-info-countdown-seconds
+        .am-info-countdown-seconds-content
+          51
+        .am-info-countdown-seconds-header
+          Second<i>s</i>
 
   .am-download
     .am-download-link.button.button__red
@@ -70,11 +80,9 @@
     .am-video.am-video__rtl
       .am-video-content
         .am-video-content-preview
-          = '<iframe class="media-youtube-player" title="Verizon | Our Independent Lead Director, M. Frances Keeth" src="https://www.youtube.com/embed/vXHjodXp_tg?wmode=opaque&amp;modestbranding=1&amp;showinfo=0&amp;wmode=opaque&amp;rel=0" allowfullscreen="" width="640" height="390" frameborder="0">Lowell McAdam, Lowell McAdam</iframe>'
+          = '<iframe src="https://player.vimeo.com/video/207234457?color=CD040B" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
         .am-video-content-author
-          Our Chairman and CEO,
-          %br>/
-          Lowell McAdam
+          Our Chairman and CEO, Lowell McAdam
       .am-video-text
         .am-video-text-quote “
         %p When you think about the types of services our network can provide in 2017 and beyond, Verizon will continue to cement and expand our lead over our competition.
@@ -82,7 +90,7 @@
     .am-video
       .am-video-content
         .am-video-content-preview
-          = '<iframe class="media-youtube-player" title="Verizon | Our Independent Lead Director, M. Frances Keeth" src="http://www.youtube.com/embed/wmlILUimZN4?wmode=opaque&amp;modestbranding=1&amp;showinfo=0&amp;wmode=opaque&amp;rel=0" allowfullscreen="" width="640" height="390" frameborder="0">Video of Verizon | Our Independent Lead Director, M. Frances Keeth</iframe>'
+          = '<iframe src="https://player.vimeo.com/video/207141222?color=CD040B" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
         .am-video-content-author
           Our Human Resources Committee Chair,
           %br>/
@@ -205,7 +213,7 @@
             %p
               %i Left to right
             .row
-              .col-sm-4
+              .col-sm-6
                 %p
                   %b
                     %em Lowell C. McAdam
@@ -226,24 +234,11 @@
                   %b
                     %em Kathryn A. Tesija
                   %span Former Executive Vice President and Chief Merchandising and Supply Chain Officer, Target Corporation
-              .col-sm-4
                 %p
                   %b
                     %em Gregory G. Weaver
                   %span Former Chairman and Chief Executive Officer, Deloitte & Touche LLP
-                %p
-                  %b
-                    %em Richard L. Carrión
-                  %span Chairman and CEO, Popular, Inc.
-                %p
-                  %b
-                    %em Melanie L. Healey
-                  %span Former Group President of North America for The Proctor & Gamble Company
-                %p
-                  %b
-                    %em Gregory D. Wasson
-                  %span Former President and CEO, Walgreens Boots Alliance, Inc.
-              .col-sm-4
+              .col-sm-6
                 %p
                   %b
                     %em Clarence Otis, Jr.
@@ -256,6 +251,18 @@
                   %b
                     %em Karl-Ludwig Kley
                   %span Chairman of the Executive Board and CEO, Merck KGaA
+                %p
+                  %b
+                    %em Richard L. Carrión
+                  %span Chairman and CEO, Popular, Inc.
+                %p
+                  %b
+                    %em Melanie L. Healey
+                  %span Former Group President of North America for The Proctor & Gamble Company
+                %p
+                  %b
+                    %em Gregory D. Wasson
+                  %span Former President and CEO, Walgreens Boots Alliance, Inc.
           .am-agenda-list-image-names.am-agenda-list-image-names__tablet
             %p
               %i Left to right
@@ -392,12 +399,7 @@
                 %p Limit Matching Contributions for Executives
                 %span Page XX of the proxy statement
       .am-vote
-        .row
-          .col-6.offset-3.text-right
-            %a.am-vote-link.button.button__red(href="#" data-modal="#modal_vote")
-              Vote
-              %svg{:height => "13", :viewbox => "0 0 10 13", :width => "10", :xmlns => "http://www.w3.org/2000/svg"}
-                %g
-                  %path{:d => "M9.2 6.2C9.2 5.9 9.1 5.7 8.9 5.6L2 0.2C1.5-0.2 0.9-0.1 0.5 0.4 0.1 0.9 0.2 1.5 0.7 1.9L6.5 6.5 0.7 11.1C0.2 11.4 0.2 12.1 0.5 12.6 0.9 13 1.6 13.1 2 12.8L8.9 7.4C9.3 7.1 9.4 6.6 9.2 6.2Z"}
+        = partial(:"am-vote")
+
 
 = partial(:"footer", :locals => { :lvl1 => lvl1 })

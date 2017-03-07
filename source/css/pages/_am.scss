@@ -1,18 +1,406 @@
-@import 'am-old';
+@import "am-old";
 
-// am-old assumes bold for all text, and uses ems for normal
+// Globals fixing font sizes and grid framework cruft
 .am-container {
   * {
     font-weight: bold;
   }
+
   em {
     font-weight: normal;
   }
+  .container {
+    max-width: 100%;
+  }
 }
 
+// Just so you know modal
+.am-modal {
+  background: white;
+  padding: $margin-large;
+  max-width: 850px;
+  max-height: calc(100vh - #{$margin-large * 2});
+  width: calc(100vw - #{$margin-large * 2});
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: scroll;
 
+  @include translate(-50%, -50%);
+
+  &-close {
+    width: 30px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  &-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &-h1 {
+    margin-bottom: $margin-medium;
+
+    @include type("larger");
+  }
+
+  &-p {
+    @include type("medium-body");
+  }
+
+  &-continue {
+    margin-top: $margin-medium-large;
+  }
+
+  &-info-when, &-info-where {
+    margin-top: $margin-medium !important; // Override old styles
+  }
+}
+
+// Hero Unit
+.am-info {
+  margin-top: $header-height;
+  padding: $margin-large;
+  height: auto;
+
+  &-when {
+    margin-top: 28px;
+  }
+
+  &-countdown {
+    top: $margin-large;
+    right: $margin-large;
+  }
+
+  &-countdown-days-header,
+  &-countdown-hours-header,
+  &-countdown-minutes-header,
+  &-countdown-seconds-header {
+    line-height: 10px;
+    position: relative;
+    top: 0px;
+  }
+
+  &-bg {
+    background-position: center 35%;
+
+    &:before {
+      content: '.';
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    }
+  }
+}
+
+// Download buttons
+.am-download {
+  padding: $margin-medium 0 0 0;
+  position: relative;
+  margin-top: 0;
+}
+
+// Video modules
+.am-video {
+  padding-top: $margin-larger;
+
+  &-content-preview {
+    margin-top: 0;
+  }
+
+  &__rtl &-text {
+    float: right;
+    margin-right: 3px;
+  }
+
+  &-text-quote {
+    margin: 0 0 -37px;
+    position: relative;
+    top: 5px;
+
+    &:last-child {
+      margin-top: 4px;
+      top: -5px;
+    }
+  }
+
+  &-content-author {
+    @include type("medium-body");
+
+    font-weight: bold;
+    margin-top: 16px;
+  }
+
+  &-text {
+    width: 370px;
+    position: relative;
+    top: -20px;
+  }
+
+  &-text p {
+    @include type("large");
+
+    line-height: 34px;
+  }
+}
+
+// Charts
 .am-stats {
+  margin-top: $margin-larger;
+  padding: $margin-large 0;
+
   &-chart-header {
-    height: 120px;
+    height: 90px;
+  }
+}
+
+// Agenda and Voting Recommendations
+.am-agenda {
+  margin-top: $margin-larger;
+  padding-top: 0;
+
+  &-list {
+    margin-top: $margin-medium-large;
+    padding-top: 0;
+    max-width: 1062px;
+    margin: auto;
+  }
+
+  &-list-item {
+    margin-top: $margin-medium;
+    padding: $margin-medium $margin-medium ($margin-medium + 3px) 110px;
+
+    &-icon {
+      top: $margin-medium;
+    }
+
+    &-num {
+      top: $margin-medium;
+      font-weight: normal;
+    }
+
+    &-header {
+      margin-top: 22px;
+
+      @include type("medium");
+    }
+
+    &-content span {
+      font-weight: normal;
+    }
+
+    &-content .col-xs-6 {
+      padding: 0 ($margin-medium / 2);
+
+      @include type("medium-small");
+
+      span {
+        @include type("body");
+      }
+
+      p, span {
+        padding: 0;
+      }
+    }
+  }
+
+  &-list-image-names {
+    padding: $margin-small;
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    b em {
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: normal;
+    }
+  }
+
+  &-download .button {
+    float: right;
+  }
+}
+
+// Bottom vote button
+.am-vote {
+  padding: $margin-medium-large 0 $margin-larger 0;
+
+  &-link {
+    width: 165px;
+  }
+}
+
+@media (max-width: $ipad) {
+
+  .am-info {
+    padding: $margin-medium-large;
+    &-countdown {
+      top: $margin-medium-large;
+      right: $margin-medium-large;
+    }
+    &-header,
+    &-countdown-days-content,
+    &-countdown-hours-content,
+    &-countdown-minutes-content,
+    &-countdown-seconds-content,
+    &-countdown-colon, {
+      @include type("larger");
+    }
+    &-countdown-days,
+    &-countdown-hours,
+    &-countdown-minutes,
+    &-countdown-seconds, {
+      width: 80px;
+    }
+  }
+
+  .am-container .container {
+    max-width: 100%;
+    padding: 0 $margin-large;
+  }
+
+  .am-video {
+    overflow: visible;
+
+    &-content {
+      width: 100%;
+      margin: 0 !important;
+      float: none !important;
+
+      &-preview {
+        padding-top: 56.25%;
+        width: 100%;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &-text {
+      float: none;
+      width: 100%;
+      margin-top: $margin-medium;
+
+      &-quote, p {
+        text-align: left !important;
+      }
+    }
+  }
+
+  .am-agenda-list {
+    &-image {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+    &-image-links {
+      display: none;
+    }
+  }
+
+  .am-stats {
+    &-header {
+      width: 100%;
+      h2 {
+        max-width: 100%;
+        margin-bottom: $margin-medium;
+        @include type("large");
+      }
+    }
+    &-chart {
+      padding-left: 0;
+      width: 33.3333%;
+      &:nth-child(2) {
+        padding-right: ($margin-medium / 1.5);
+      }
+      &:nth-child(3) {
+        padding-right: ($margin-medium / 3);
+        padding-left: ($margin-medium / 3);
+      }
+      &:nth-child(4) {
+        padding-left: ($margin-medium / 1.5);
+      }
+    }
+    &-chart-header {
+      height: 150px;
+      @include type("medium");
+    }
+  }
+}
+
+@media (max-width: $ipad-tall) {
+  .am-container .container {
+    max-width: 100%;
+    padding: 0 $margin-medium-large;
+  }
+
+  .am-modal {
+    padding: $margin-medium-large;
+    &-h1 {
+      @include type("large");
+    }
+    &-p {
+      @include type("mediumish-body");
+    }
+    &-continue {
+      width: 165px;
+      margin-top: $margin-medium;
+    }
+    &-close {
+      width: 25px;
+    }
+  }
+}
+
+@media (max-width: $iphone) {
+  .am-stats .container {
+    max-width: 400px;
+  }
+  .am-stats-chart {
+    float: none;
+    width: 100%;
+    margin-top: $margin-large;
+    padding: 0 !important; // Override column layout
+    &-donut {
+      margin: auto;
+    }
+    &-header {
+      height: auto;
+      @include type("medium-small");
+    }
+  }
+  .am-stats-header h2 {
+    @include type("medium");
+  }
+  .am-info-bg {
+    background-size: 180%;
+    background-position: center 40%;
+
+    &:before {
+      @include linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    }
   }
 }

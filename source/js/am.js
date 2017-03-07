@@ -9,6 +9,11 @@ $(function () {
   if (!window.location.pathname.match('am.html')) return
   setupClock()
   setupCharts()
+
+  // Close modal
+  $('.am-modal-continue, .am-modal-close, .am-modal-container').click(function () {
+    $('.am-modal-container').fadeOut(150)
+  })
 })
 
 //
@@ -84,8 +89,7 @@ var setupCharts = function () {
     })
   }
 
-  $('.chart').each(function () {
-    var flag = 0
+  $('.chart').each(function (i) {
     var el = $(this)
     var trigger = el.closest('.am-stats-chart')
     new ScrollMagic.Scene({
@@ -96,10 +100,8 @@ var setupCharts = function () {
     })
       .addTo(controller)
       .on('enter', function () {
-        if (!flag) {
-          buildChart(el)
-          flag++
-        }
+        $('.chartjs-hidden-iframe').remove()
+        setTimeout(function () { buildChart(el) }, i * 100)
       })
   })
 }

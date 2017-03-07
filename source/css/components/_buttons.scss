@@ -3,8 +3,8 @@
   font-size: 16px;
   line-height: 21px;
   color: #fff;
-  padding: 16px 20px;
-  width: 300px;
+  padding: 15px 20px;
+  width: 285px;
   text-align: center;
   background: #4b4b4b;
   border: 2px solid #4b4b4b;
@@ -27,12 +27,12 @@
   }
 
   &__red {
-    background: #CD040B;
-    border-color: #CD040B;
+    background: $red-primary;
+    border-color: $red-primary;
 
     &:hover {
-      background: #a80309;
-      border-color: #a80309;
+      background: $red-secondary;
+      border-color: $red-secondary;
     }
 
     &:active {
@@ -44,5 +44,7 @@
   img, svg {
     margin-left: 8px;
     fill: #fff;
+    position: relative;
+    top: 1px;
   }
 }

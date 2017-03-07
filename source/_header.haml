@@ -1,4 +1,4 @@
-%header.header.headroom
+%header.header
   .header-content
     .header-content-burger
       .header-content-burger-click
@@ -6,7 +6,11 @@
     %a.header-content-logo(href="index.html")
       %img(alt="Verizon 2016" src="images/header/logo.svg")
     .header-content-text
-      .header-content-label 2016 Annual Report
+      .header-content-label
+        - if lvl1 == 'home'
+          2016 Annual Report
+        - if lvl1 == 'am16'
+          2016 Annual Meeting
       - if lvl1 == 'home'
         %a.header-content-skip{ href: "letter.html" }
           Skip to Chairman’s letter
@@ -27,4 +31,9 @@
         %a(href="am.html") Annual shareholder meeting
       %li
         %a(href="#") Downloads
+
+  - if lvl1 == 'am16'
+    .header-am-vote
+      = partial(:"am-vote")
+
   .header-nav_cover
