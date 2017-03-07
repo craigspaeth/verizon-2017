@@ -5,26 +5,15 @@ Setting up reset, variables, typography.
 --------------- */
 @import 'base/module';
 
-
-
 /*
-02. UTILS
----------------
-Utils will be used for small helpers, functions and mixins.
---------------- */
-@import 'utils/module';
-
-
-
-/*
-03. LAYOUT
+02. LAYOUT
 ---------------
 Main layout styles, like grid, header, footer, sidebars etc.
 --------------- */
 @import 'layout/module';
 
 /*
-04. COMPONENTS
+03. COMPONENTS
 ---------------
 Buttons, carousels, nav bars.
 --------------- */
@@ -32,16 +21,8 @@ Buttons, carousels, nav bars.
 
 
 /*
-05. PAGES
+04. PAGES
 ---------------
 Here we'll have all the styles needed for content pages. Each page will have its own scss file.
 --------------- */
 @import 'pages/module';
-
-/*
-06. Vendors
----------------
-Vendors is for using 3rd party stylesheets, like bootstrap and other frameworks/plugins.
---------------- */
-@import 'vendors/module';
-@import 'hover/hover';
