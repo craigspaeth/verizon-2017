@@ -10,9 +10,15 @@ $(function () {
   setupClock()
   setupCharts()
 
-  // Close modal
-  $('.am-modal-continue, .am-modal-close, .am-modal-container').click(function () {
-    $('.am-modal-container').fadeOut(150)
+  // Just so you know modal
+  $('.am-just-so-you-know-modal').show()
+  $('.am-modal-continue, .modal-close, .modal-container').click(function () {
+    $('.am-just-so-you-know-modal').fadeOut(150)
+  })
+
+  // Open voting modal
+  $('.am-vote-link').click(function () {
+    $('.am-voting-modal').fadeIn(150)
   })
 })
 

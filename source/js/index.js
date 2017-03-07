@@ -16,4 +16,9 @@ $(function () {
     $main.show()
     $main.find('.ar-slide-video').get(0).play()
   })
-});
+
+  // Close modals
+  $('.modal-close, .modal-container').click(function () {
+    $(this).closest('.modal-container').fadeOut(150)
+  })
+})

@@ -1,0 +1,76 @@
+.modal {
+  background: white;
+  padding: $margin-large;
+  max-width: 900px;
+  max-height: calc(100vh - #{$margin-large * 2});
+  width: calc(100vw - #{$margin-large * 2});
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: scroll;
+
+  @include translate(-50%, -50%);
+
+  &-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+  }
+
+  &-close {
+    width: 30px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  &-h1 {
+    margin-bottom: $margin-medium;
+
+    @include type("larger");
+  }
+
+  &-p {
+    @include type("medium-body");
+  }
+
+  &-continue {
+    margin-top: $margin-medium-large;
+  }
+
+  &-info-when, &-info-where {
+    margin-top: $margin-medium !important; // Override old styles
+  }
+}
+
+@media (max-width: $ipad-tall) {
+  .modal {
+    padding: $margin-medium-large;
+    &-h1 {
+      @include type("large");
+    }
+    &-p {
+      @include type("mediumish-body");
+    }
+    &-continue {
+      width: 165px;
+      margin-top: $margin-medium;
+    }
+    &-close {
+      width: 25px;
+    }
+  }
+}
+
+@media (max-width: $iphone) {
+  .modal {
+    width: calc(100vw - #{$margin-small * 2});
+    max-height: calc(100vh - #{$margin-small * 2});
+  }
+}

@@ -9,59 +9,39 @@
   em {
     font-weight: normal;
   }
+
   .container {
     max-width: 100%;
   }
+
+  .modal-p {
+    font-weight: normal;
+  }
 }
 
-// Just so you know modal
-.am-modal {
-  background: white;
-  padding: $margin-large;
-  max-width: 850px;
-  max-height: calc(100vh - #{$margin-large * 2});
-  width: calc(100vw - #{$margin-large * 2});
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  overflow: scroll;
-
-  @include translate(-50%, -50%);
-
-  &-close {
-    width: 30px;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    cursor: pointer;
+// Voting modal
+.am-voting-modal {
+  &-col {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: $margin-medium-large;
+    &:nth-child(3) {
+      padding-right: ($margin-medium / 2);
+    }
+    &:nth-child(4) {
+      padding-left: ($margin-medium / 2);
+    }
   }
-
-  &-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.6);
+  .modal-p {
+    @include type("body");
   }
-
-  &-h1 {
-    margin-bottom: $margin-medium;
-
-    @include type("larger");
+  h2 {
+    @include type("medium");
   }
-
-  &-p {
-    @include type("medium-body");
-  }
-
-  &-continue {
-    margin-top: $margin-medium-large;
-  }
-
-  &-info-when, &-info-where {
-    margin-top: $margin-medium !important; // Override old styles
+  .arrow-link {
+    display: block;
+    margin: $margin-small 0;
   }
 }
 
@@ -248,25 +228,27 @@
 }
 
 @media (max-width: $ipad) {
-
   .am-info {
     padding: $margin-medium-large;
+
     &-countdown {
       top: $margin-medium-large;
       right: $margin-medium-large;
     }
+
     &-header,
     &-countdown-days-content,
     &-countdown-hours-content,
     &-countdown-minutes-content,
     &-countdown-seconds-content,
-    &-countdown-colon, {
+    &-countdown-colon {
       @include type("larger");
     }
+
     &-countdown-days,
     &-countdown-hours,
     &-countdown-minutes,
-    &-countdown-seconds, {
+    &-countdown-seconds {
       width: 80px;
     }
   }
@@ -312,10 +294,12 @@
     &-image {
       width: 100%;
       height: auto;
+
       img {
         width: 100%;
       }
     }
+
     &-image-links {
       display: none;
     }
@@ -324,28 +308,36 @@
   .am-stats {
     &-header {
       width: 100%;
+
       h2 {
         max-width: 100%;
         margin-bottom: $margin-medium;
+
         @include type("large");
       }
     }
+
     &-chart {
       padding-left: 0;
       width: 33.3333%;
+
       &:nth-child(2) {
-        padding-right: ($margin-medium / 1.5);
+        padding-right: $margin-medium / 1.5;
       }
+
       &:nth-child(3) {
-        padding-right: ($margin-medium / 3);
-        padding-left: ($margin-medium / 3);
+        padding-right: $margin-medium / 3;
+        padding-left: $margin-medium / 3;
       }
+
       &:nth-child(4) {
-        padding-left: ($margin-medium / 1.5);
+        padding-left: $margin-medium / 1.5;
       }
     }
+
     &-chart-header {
       height: 150px;
+
       @include type("medium");
     }
   }
@@ -356,45 +348,35 @@
     max-width: 100%;
     padding: 0 $margin-medium-large;
   }
-
-  .am-modal {
-    padding: $margin-medium-large;
-    &-h1 {
-      @include type("large");
-    }
-    &-p {
-      @include type("mediumish-body");
-    }
-    &-continue {
-      width: 165px;
-      margin-top: $margin-medium;
-    }
-    &-close {
-      width: 25px;
-    }
-  }
 }
 
 @media (max-width: $iphone) {
   .am-stats .container {
     max-width: 400px;
   }
+
   .am-stats-chart {
     float: none;
     width: 100%;
     margin-top: $margin-large;
-    padding: 0 !important; // Override column layout
+    padding: 0 !important;
+
+    // Override column layout
     &-donut {
       margin: auto;
     }
+
     &-header {
       height: auto;
+
       @include type("medium-small");
     }
   }
+
   .am-stats-header h2 {
     @include type("medium");
   }
+
   .am-info-bg {
     background-size: 180%;
     background-position: center 40%;

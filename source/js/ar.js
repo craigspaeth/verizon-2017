@@ -117,4 +117,4 @@ $(function () {
   $(window).on('resize', _.debounce(function () {
     scrollToSlide(slideIndex, false)
   }, 300))
-});
+})
