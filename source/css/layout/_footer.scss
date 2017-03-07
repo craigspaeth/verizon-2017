@@ -83,40 +83,9 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .footer {
-    &-container {
-      padding: 50px 18px 160px;
-    }
-
-    &-logo {
-      width: 120px;
-      position: absolute;
-      top: 37px;
-      left: $margin-large;
-    }
-
-    &-links {
-      a {
-        width: 50%;
-      }
-    }
-
-    &-copy {
-      left: 18px;
-      top: auto;
-      bottom: 50px;
-      right: auto;
-    }
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .footer {
-    &-links {
-      a {
-        width: 100%;
-      }
-    }
+@media (max-width: $iphone) {
+  .footer-container {
+    padding: $margin-small;
+    padding-top: 150px;
   }
 }
