@@ -1,1 +1,18 @@
 @import 'am-old';
+
+// am-old assumes bold for all text, and uses ems for normal
+.am-container {
+  * {
+    font-weight: bold;
+  }
+  em {
+    font-weight: normal;
+  }
+}
+
+
+.am-stats {
+  &-chart-header {
+    height: 120px;
+  }
+}
