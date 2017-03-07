@@ -1,7 +1,7 @@
 .modal {
   background: white;
   padding: $margin-large;
-  max-width: 900px;
+  max-width: 850px;
   max-height: calc(100vh - #{$margin-large * 2});
   width: calc(100vw - #{$margin-large * 2});
   position: absolute;
@@ -49,7 +49,7 @@
   }
 }
 
-@media (max-width: $ipad-tall) {
+@media (max-width: $ipad) {
   .modal {
     padding: $margin-medium-large;
     &-h1 {
@@ -70,7 +70,20 @@
 
 @media (max-width: $iphone) {
   .modal {
+    max-width: 500px;
     width: calc(100vw - #{$margin-small * 2});
     max-height: calc(100vh - #{$margin-small * 2});
+    padding: $margin-medium;
+    &-p {
+      @include type("body-small");
+    }
+    &-h1 {
+      @include type("medium");
+    }
+    &-close {
+      top: $margin-medium;
+      right: $margin-medium;
+      width: 20px;
+    }
   }
 }

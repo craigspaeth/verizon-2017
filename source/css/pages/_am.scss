@@ -1,5 +1,7 @@
 @import "am-old";
 
+$mobile-hero-height: 310px;
+
 // Globals fixing font sizes and grid framework cruft
 .am-container {
   * {
@@ -26,19 +28,24 @@
     display: inline-block;
     vertical-align: top;
     margin-bottom: $margin-medium-large;
+
     &:nth-child(3) {
-      padding-right: ($margin-medium / 2);
+      padding-right: $margin-medium / 2;
     }
+
     &:nth-child(4) {
-      padding-left: ($margin-medium / 2);
+      padding-left: $margin-medium / 2;
     }
   }
+
   .modal-p {
     @include type("body");
   }
+
   h2 {
     @include type("medium");
   }
+
   .arrow-link {
     display: block;
     margin: $margin-small 0;
@@ -351,8 +358,84 @@
 }
 
 @media (max-width: $iphone) {
+  .am-container .container {
+    padding: 0 $margin-small;
+  }
+
+  .am-info {
+    margin-top: $header-height-mobile;
+    height: $mobile-hero-height;
+    margin-bottom: (62px + $margin-medium) + $margin-medium;
+    padding: $margin-small;
+
+    &-countdown {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      text-align: center;
+      top: $mobile-hero-height + $margin-medium;
+    }
+
+    &-header {
+      @include type("large");
+    }
+    &-when, &-where {
+      @include type("medium-small");
+      margin-top: $margin-small;
+    }
+
+    &-bg {
+      background-size: 200%;
+      background-position: center 40%;
+
+      &:before {
+        @include linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+      }
+    }
+
+    &-header,
+    &-countdown-days-content,
+    &-countdown-hours-content,
+    &-countdown-minutes-content,
+    &-countdown-seconds-content,
+    &-countdown-colon {
+      @include type("large");
+    }
+
+    &-countdown-days,
+    &-countdown-hours,
+    &-countdown-minutes,
+    &-countdown-seconds {
+      width: 70px;
+    }
+
+    &-countdown-days-header,
+    &-countdown-hours-header,
+    &-countdown-minutes-header,
+    &-countdown-seconds-header {
+      @include type("body");
+      font-weight: bold;
+    }
+  }
+
+  .am-video-text {
+    padding: 0;
+    p {
+      @include type("medium");
+    }
+  }
+
   .am-stats .container {
     max-width: 400px;
+  }
+
+  .am-download {
+    margin: 0;
+    padding: 0;
+
+    &-link:first-child {
+      margin-bottom: $margin-small;
+    }
   }
 
   .am-stats-chart {
@@ -377,12 +460,9 @@
     @include type("medium");
   }
 
-  .am-info-bg {
-    background-size: 180%;
-    background-position: center 40%;
-
-    &:before {
-      @include linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-    }
+  .am-voting-modal-col {
+    width: 100%;
+    padding: 0 !important; // Override
+    margin-bottom: $margin-medium;
   }
 }

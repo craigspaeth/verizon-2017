@@ -302,5 +302,9 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
       position: relative;
       top: -3px;
     }
+
+    &[data-lvl=am16] .header-content-label {
+      display: none;
+    }
   }
 }
