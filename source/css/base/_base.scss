@@ -47,22 +47,18 @@ $margin-small: 20px;
     line-height: 22px;
     font-weight: bold;
   } @else if $type == "medium-body" {
-    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
     font-size: 21px;
     line-height: 28px;
     font-weight: normal;
   } @else if $type == "mediumish-body" {
-    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 25px;
     font-weight: normal;
   } @else if $type == "body" {
-    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
   } @else if $type == "body-small" {
-    font-family: "NHaasGroteskDisplay", Helvetica, Arial, sans-serif;
     font-size: 12px;
     line-height: 18px;
     font-weight: normal;
