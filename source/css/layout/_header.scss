@@ -43,6 +43,7 @@ $hamburger-transition-two: top 0.2s ease 0.55s, transform 0.5s ease 0s, width 0s
       margin-left: 32px;
       position: relative;
       width: $hamburger-width;
+      transform-origin: left;
 
       &-click {
         height: $hamburger-width;

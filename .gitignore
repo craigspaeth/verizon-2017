@@ -24,8 +24,8 @@ using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 /vendor/bundle
 /lib/bundler/man/
 .rvmrc
-*.DS_store
 
 # Make sure to get the video files
 /source/videos/
 /build/*
+.DS_store

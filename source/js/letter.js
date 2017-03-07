@@ -5,7 +5,7 @@
 var $ = window.$
 
 $(function () {
-  if (window.location.pathname !== '/letter.html') return
+  if (!window.location.pathname.match('letter.html')) return
 
   // Cross fade left collumn items
 })

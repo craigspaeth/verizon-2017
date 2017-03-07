@@ -1,0 +1,961 @@
+//
+// Base set of v1 styles for the Annual Meeting page from
+// https://github.com/AddisonDesign/verizonAM16
+//
+// See _am.scss for the latest set.
+//
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 760px;
+
+  .am {
+    &-info {
+      height: auto;
+      position: absolute;
+      top: 100px;
+      bottom: 57px + 27px + 27px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.am {
+  &-info {
+    height: 601px;
+    position: relative;
+    padding: 81px 77px 0 77px;
+
+    a {
+      font-size: 16px;
+      line-height: 21px;
+      color: #000;
+      display: inline-block;
+      padding-top: 5px;
+
+      svg {
+        fill: #CD040B;
+        margin: 0 0 -2px 5px;
+
+        @include transition(0.5s);
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        svg {
+          @include translate(5px, 0);
+        }
+      }
+    }
+
+    &-header {
+      position: relative;
+      font-size: 60px;
+      line-height: 62px;
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+
+    &-when,
+    &-where {
+      position: relative;
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 38px;
+    }
+
+    &-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: 0 0 no-repeat url(../images/info/bg.jpg);
+
+      @include background-size(cover);
+    }
+
+    &-countdown {
+      position: absolute;
+      top: 85px;
+      right: 95px;
+      font-size: 16px;
+      line-height: 21px;
+
+      i {
+        font-style: normal;
+
+        @include transition(0.5s);
+      }
+
+      .fadeit i {
+        opacity: 0;
+      }
+
+      &-colon,
+      &-days,
+      &-hours,
+      &-minutes,
+      &-seconds {
+        display: inline-block;
+        width: 105px;
+        vertical-align: top;
+
+        &-content {
+          font-size: 64px;
+          line-height: 62px;
+          padding-bottom: 9px;
+          display: block;
+          text-align: center;
+        }
+
+        &-header {
+          font-size: 16px;
+          line-height: 21px;
+          display: block;
+          text-align: center;
+        }
+      }
+
+      &-colon {
+        font-size: 64px;
+        line-height: 62px;
+        width: auto;
+      }
+    }
+  }
+
+  &-download {
+    padding: 27px 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -57px - 27px - 27px;
+
+    &-link {
+      margin: 0 14px;
+    }
+  }
+
+  &-video {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 80px 0 0;
+    overflow: hidden;
+
+    &-text {
+      display: inline-block;
+      vertical-align: top;
+      width: 404px;
+
+      &-quote {
+        color: #CD040B;
+        font-size: 85px;
+        line-height: 100px;
+        margin: 8px 0 -25px;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 34px;
+        line-height: 40px;
+      }
+    }
+
+    &-content {
+      width: 626px;
+      margin-right: 25px;
+      display: inline-block;
+      vertical-align: top;
+
+      &-preview {
+        margin-top: 25px;
+        position: relative;
+
+        img {
+          vertical-align: middle;
+          max-width: 100%;
+          height: auto;
+        }
+
+        iframe {
+          vertical-align: middle;
+          width: 626px;
+          height: 352px;
+        }
+
+        &-play {
+          position: absolute;
+          left: 17px;
+          bottom: 17px;
+          width: 60px;
+          height: 60px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &-author {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 18px;
+      }
+    }
+
+    &__rtl {
+      .am-video {
+        &-text {
+          float: left;
+
+          &-quote,
+          p {
+            text-align: right;
+          }
+        }
+
+        &-content {
+          margin: 0 0 0 25px;
+          float: right;
+        }
+      }
+    }
+  }
+
+  &-stats {
+    background: #F6F6F6;
+    margin-top: 100px;
+    padding: 99px 55px 91px 80px;
+    overflow: hidden;
+
+    &-header {
+      float: left;
+      width: 25%;
+
+      h2 {
+        font-size: 36px;
+        line-height: 38px;
+        margin: 0;
+        padding: 0;
+        max-width: 350px;
+      }
+    }
+
+    &-chart {
+      width: 25%;
+      float: left;
+      padding-left: 17px;
+
+      &-header {
+        padding: 0 0 35px;
+        font-size: 24px;
+        line-height: 30px;
+        max-width: 280px;
+      }
+
+      &-donut {
+        width: 160px;
+      }
+
+      &-legend {
+        padding-top: 20px;
+
+        &-item {
+          position: relative;
+          padding: 12px 0 0 15px;
+          font-size: 18px;
+          line-height: 24px;
+
+          i {
+            position: absolute;
+            left: 0;
+            top: 17px;
+            display: block;
+            width: 9px;
+            height: 9px;
+
+            @include border-radius(5px);
+          }
+
+          span {
+            font-size: 14px;
+            line-height: 21px;
+            position: relative;
+            display: block;
+
+            i {
+              top: 4px;
+              margin-left: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-agenda {
+    padding-top: 93px;
+
+    &-header h2 {
+      font-size: 36px;
+      line-height: 38px;
+      margin: 0;
+      padding: 10px 0 0;
+    }
+
+    &-download {}
+
+    &-list {
+      padding-top: 26px;
+      clear: both;
+
+      &-item {
+        background: #F6F6F6;
+        position: relative;
+        margin-top: 42px;
+        padding: 64px 75px 45px 109px;
+        font-size: 14px;
+        line-height: 21px;
+        overflow: hidden;
+        clear: both;
+
+        &-icon {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          background: #0088CE;
+          text-align: center;
+          padding-top: 14px;
+          left: 31px;
+          top: 43px;
+
+          @include border-radius(25px);
+
+          &__down {
+            background: #FF7900;
+
+            @include rotate(180deg);
+          }
+        }
+
+        &-num {
+          position: absolute;
+          left: 109px;
+          top: 41px;
+        }
+
+        &-header {
+          font-size: 24px;
+          line-height: 30px;
+          padding: 2px 0 0;
+          float: left;
+          width: 272px;
+        }
+
+        &-content {
+          margin-left: 327px;
+
+          p {
+            padding: 10px 0 0;
+            margin: 0;
+
+            &:first-child {
+              padding: 0;
+            }
+
+            i {
+              font-style: normal;
+              color: #CD040B;
+              font-size: 18px;
+              line-height: 24px;
+            }
+          }
+
+          .row {
+            margin-top: 18px;
+
+            p {
+              padding-top: 4px;
+            }
+
+            span {
+              font-size: 14px;
+              line-height: 21px;
+            }
+          }
+        }
+      }
+
+      &-image {
+        width: 1062px;
+        height: 465px;
+        position: relative;
+
+        &-bg {
+          vertical-align: middle;
+        }
+
+        &-links {
+          i {
+            font-style: normal;
+            position: absolute;
+            display: block;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+
+            @include border-radius(7px);
+
+            background: #fff center center no-repeat url(../images/agenda/plus.svg);
+
+            b {
+              padding: 0 10px;
+              overflow: hidden;
+              position: absolute;
+              left: 3px;
+              top: 23px;
+              background: #fff;
+              font-size: 12px;
+              line-height: 14px;
+              display: block;
+              max-height: 0;
+              width: 180px;
+              font-weight: normal;
+              opacity: 0;
+
+              @include transition(0.4s);
+            }
+
+            &:hover {
+              z-index: 1;
+
+              b {
+                opacity: 1;
+                max-height: 100px;
+                padding: 9px 10px;
+              }
+            }
+          }
+        }
+
+        &-names {
+          background: #F6F6F6;
+          padding: 30px 14px;
+          display: none;
+          font-size: 12px;
+          line-height: 18px;
+
+          i {
+            font-size: 14px;
+            line-height: 21px;
+            color: #767676;
+            font-style: normal;
+          }
+
+          b {
+            display: block;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          &__tablet {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-vote {
+    padding: 57px 0;
+    text-align: right;
+
+    .col-6 {
+      float: right;
+      margin-right: 11px;
+    }
+
+    &-link {}
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .am {
+    &-stats {
+      margin-top: 34px;
+      padding: 56px 0 57px;
+      overflow: hidden;
+
+      .container {
+        width: 725px;
+      }
+
+      &-header {
+        float: none;
+        width: 100%;
+        margin-bottom: 27px;
+
+        h2 {
+          font-size: 24px;
+          line-height: 26px;
+          max-width: none;
+        }
+      }
+
+      &-chart {
+        width: 33%;
+        padding-left: 0;
+        padding-right: 17px;
+
+        &-header {
+          padding: 0 0 21px;
+          font-size: 18px;
+          line-height: 20px;
+          max-width: 220px;
+        }
+
+        &-legend {
+          padding-top: 18px;
+
+          &-item {
+            padding: 12px 0 0 15px;
+            font-size: 16px;
+            line-height: 20px;
+
+            i {
+              top: 16px;
+            }
+
+            span {
+              font-size: 14px;
+              line-height: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1062px) {
+  .screen {
+    min-height: 570px;
+  }
+
+  .am {
+    &-info {
+      padding: 55px 6px 0 92px;
+
+      &-header {
+        font-size: 36px;
+        line-height: 38px;
+      }
+
+      &-when,
+      &-where {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 14px;
+      }
+
+      &-bg {
+        background-position: center center;
+      }
+
+      &-countdown {
+        top: 67px;
+        right: 6px;
+        font-size: 12px;
+        line-height: 21px;
+
+        &-colon,
+        &-days,
+        &-hours,
+        &-minutes,
+        &-seconds {
+          display: inline-block;
+          width: 67px;
+          vertical-align: top;
+
+          &-content {
+            font-size: 36px;
+            line-height: 38px;
+            padding-bottom: 0;
+          }
+
+          &-header {
+            font-size: 12px;
+            line-height: 21px;
+            margin-top: -5px;
+          }
+        }
+
+        &-colon {
+          font-size: 36px;
+          line-height: 38px;
+          width: auto;
+        }
+      }
+    }
+
+    &-video {
+      padding: 18px 0 6px;
+      max-width: 725px;
+
+      &-text {
+        width: 308px;
+
+        &-quote {
+          color: #CD040B;
+          font-size: 60px;
+          line-height: 71px;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+
+      &-content {
+        width: 392px;
+        margin-right: 17px;
+
+        &-preview {
+          margin-top: 14px;
+
+          iframe {
+            width: 392px;
+            height: 225px;
+          }
+
+          &-play {
+            left: 10px;
+            bottom: 10px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        &-author {
+          font-size: 18px;
+          line-height: 28px;
+          margin-top: 12px;
+        }
+      }
+
+      &__rtl {
+        .am-video {
+          &-content {
+            margin: 0 0 0 17px;
+          }
+        }
+      }
+    }
+
+    &-agenda {
+      padding-top: 60px;
+
+      &-header h2 {
+        font-size: 24px;
+        line-height: 26px;
+        padding: 15px 0 0;
+      }
+
+      &-list {
+        &-item {
+          margin-top: 35px;
+          padding: 29px 17px 31px 84px;
+          font-size: 14px;
+          line-height: 21px;
+          overflow: hidden;
+
+          &-icon {
+            left: 17px;
+            top: 37px;
+          }
+
+          &-num {
+            position: static;
+          }
+
+          &-header {
+            font-size: 18px;
+            line-height: 20px;
+            padding: 5px 0 4px;
+            float: none;
+            width: auto;
+          }
+
+          &-content {
+            margin-left: 0;
+
+            p {
+              i {
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+
+            .row {
+              margin-top: 11px;
+            }
+          }
+        }
+
+        &-image {
+          width: auto;
+          height: auto;
+
+          &-bg {
+            width: 100%;
+            height: auto;
+          }
+
+          &-links {
+            display: none;
+          }
+
+          &-names {
+            display: block;
+
+            &__tablet {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &-vote {
+      padding: 57px 0;
+      text-align: right;
+
+      &-link {}
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+
+    .am {
+      &-info {
+        height: auto;
+        position: absolute;
+        top: 60px;
+        bottom: 90px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .am {
+    &-info {
+      padding: 49px 16px 0;
+
+      &-when,
+      &-where {
+        width: auto;
+      }
+
+      &-countdown {
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        margin-bottom: -80px;
+      }
+    }
+
+    &-download {
+      position: static;
+      margin: 0;
+
+      &-link {
+        margin: 0 14px 14px;
+      }
+    }
+
+    &-video {
+      padding: 18px 16px 6px;
+
+      &-text {
+        width: auto;
+        float: none;
+      }
+
+      &-content {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+
+        &-preview {
+          margin-top: 14px;
+
+          iframe {
+            width: 100%;
+            height: 225px;
+          }
+        }
+
+        &-author {
+          font-size: 18px;
+          line-height: 20px;
+          margin-top: 15px;
+        }
+      }
+
+      &__rtl {
+        .am-video {
+          &-text {
+            float: none;
+
+            &-quote,
+            p {
+              text-align: left;
+            }
+          }
+
+          &-content {
+            margin: 0;
+            float: none;
+          }
+        }
+      }
+    }
+
+    &-stats {
+      margin-top: 34px;
+      padding: 56px 16px 57px;
+      overflow: hidden;
+
+      .container {
+        max-width: 290px;
+      }
+
+      &-chart {
+        width: auto;
+        float: none;
+        padding: 0 0 40px;
+
+        &-header {
+          padding: 0 0 21px;
+          font-size: 18px;
+          line-height: 20px;
+          max-width: none;
+        }
+
+        &-donut {
+          margin: 0 auto;
+        }
+
+        &-legend {
+          padding-top: 18px;
+
+          &-item {
+            padding: 12px 0 0 15px;
+            font-size: 16px;
+            line-height: 20px;
+
+            i {
+              top: 16px;
+            }
+
+            span {
+              font-size: 14px;
+              line-height: 21px;
+            }
+          }
+        }
+      }
+    }
+
+    &-agenda {
+      padding: 60px 16px 0;
+
+      &-header h2 {
+        font-size: 24px;
+        line-height: 26px;
+        padding: 15px 0 18px;
+      }
+
+      &-download {
+        text-align: center;
+      }
+
+      &-list {
+        padding: 0;
+
+        &-item {
+          padding: 102px 16px 31px;
+
+          &-icon {
+            left: 17px;
+            top: 37px;
+          }
+        }
+      }
+    }
+
+    &-vote {
+      padding: 57px 0;
+      text-align: right;
+
+      .col-6 {
+        float: none;
+      }
+
+      &-link {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .am {
+    &-stats {
+      .container {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1062px) {
+  .am {
+    &-agenda {
+      .container {
+        max-width: 1062px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 767px) {
+  .am-agenda-list-image-names {
+    display: none;
+  }
+
+  .am-agenda-list-image-names__tablet {
+    display: block;
+  }
+}
